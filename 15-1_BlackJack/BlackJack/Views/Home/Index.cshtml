@@ -1,0 +1,30 @@
+﻿@model Game
+
+@{
+    ViewBag.Title = "Blackjack";
+}
+
+<hand-header hand-role="Dealer" hand="@Model.Dealer.Hand" must-show-total="@Model.Dealer.MustShowCards"></hand-header>
+
+<div class="hand mb-4">
+    @await Component.InvokeAsync("Hand", new { hand = Model.Dealer.Hand })
+</div>
+
+<hand-header hand-role="Player" hand="@Model.Player.Hand" must-show-total="true"></hand-header>
+
+<div class="hand mb-4">
+    @await Component.InvokeAsync("Hand", new { hand = Model.Player.Hand })
+</div>
+
+<div class="row mb-2">
+    <div class="col-2 offset-3">
+        <game-action-button asp-action="Deal" game-state-needs-deal="@Model.NeedsDeal"></game-action-button>
+    </div>
+    <div class="col-2">
+        <game-action-button asp-action="Hit" game-state-needs-deal="@Model.NeedsDeal"></game-action-button>
+    </div>
+    <div class="col-2">
+        <game-action-button asp-action="Stand" game-state-needs-deal="@Model.NeedsDeal"></game-action-button>
+    </div>
+</div>
+

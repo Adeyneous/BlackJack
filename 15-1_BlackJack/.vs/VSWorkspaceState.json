@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BlackJack",
+    "\\BlackJack\\Controllers",
+    "\\BlackJack\\Models",
+    "\\BlackJack\\TagHelpers",
+    "\\BlackJack\\Views",
+    "\\BlackJack\\Views\\Shared",
+    "\\BlackJack\\Views\\Shared\\Components",
+    "\\BlackJack\\Views\\Shared\\Components\\Hands",
+    "\\BlackJack\\Views\\Shared\\Components\\PlayerWinnings"
+  ],
+  "SelectedNode": "\\BlackJack\\Components\\PlayerWinningsViewComponent.cs",
+  "PreviewInSolutionExplorer": false
+}
